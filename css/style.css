@@ -1,0 +1,68 @@
+*{
+  box-sizing: border-box;  
+  margin: 0px;
+  padding:0;
+}
+
+.container{
+  width: 320px;
+  margin:10px auto;
+  
+}
+img{
+  display:block;
+  margin: auto;
+}
+aside{
+
+  background-color:antiquewhite;
+}
+
+aside p{
+  padding:20px;
+}
+
+aside h2{
+  background-color:gray;
+  color:white;
+  text-align: center;
+  padding:10px;
+}
+
+li{
+  padding:20px;
+  list-style: none;
+}
+
+main{
+  background-color:azure;
+}
+
+section{
+  padding:20px;
+}
+
+main section div{
+  border: 1px solid black;
+  padding: 20px 0px;
+}
+
+@media only screen and (min-width: 768px){
+  .container{
+    width:500px;
+  }
+
+}
+
+@media only screen and (min-width: 960px){
+  .container{
+    display:flex;
+    width:960px;
+  }
+  aside{
+    width:300px;
+  }
+  main{
+    width:660px;
+  }
+}
