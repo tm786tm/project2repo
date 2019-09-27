@@ -8,15 +8,16 @@
 
 /*----------Mobile first----------*/
 .container{
-  min-width: 320px;
+  display:flex;
+  flex-direction: column;
+  width: 320px;
   margin:10px auto;
   
 }
 
 #avatar{
   display:block;
-  margin: auto;
-
+  margin:50px auto;
 }
 
 aside{
@@ -34,6 +35,11 @@ aside h2{
   text-align: center;
   text-transform: uppercase;
   padding:10px;
+}
+
+ul{
+  display: flex;
+  flex-direction: column;
 }
 
 li{
@@ -55,11 +61,21 @@ main section div{
   padding: 20px 0px;
 }
 
-/*------For mid size screen----*/  
+/*------For mid size screen---- */
 
-@media only screen and (min-width: 768px){
+@media only screen and (min-width: 330px){
   .container{
     width:100%;
+  }
+
+  ul{
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  li{
+    text-align:center;
+    padding-left: 20px;
   }
 
 }
@@ -68,7 +84,7 @@ main section div{
 
 @media only screen and (min-width: 960px){
   .container{
-    display:flex;
+    flex-direction: row;
     width:960px;
   }
   aside{
@@ -76,5 +92,12 @@ main section div{
   }
   main{
     width:660px;
+  }
+  ul{
+    flex-direction: column;
+  }
+  li{
+    text-align: left;
+    padding-left: 50px;
   }
 }
