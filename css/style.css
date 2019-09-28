@@ -71,6 +71,7 @@ main section div{
   ul{
     flex-direction: row;
     flex-wrap: wrap;
+    justify-content: center;
   }
 
   li{
