@@ -87,6 +87,26 @@ i{
   font-size: 30px;
   color: #454545;
 }
+hr{
+  color: #dbc440;
+}
+
+h3 i{
+  color: #dbc440;
+  font-size: 20px;
+  padding: 0px 30px 15px 0px;
+}
+
+.arrow i, .bullet i{
+  font-size: 15px;
+  color: #dbc440;
+  padding-right: 20px;
+}
+
+.bullet i{
+  font-size: 5px;
+  vertical-align: middle;
+}
 
 /*------For mid size screen---- */
 
