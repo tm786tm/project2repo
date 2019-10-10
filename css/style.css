@@ -20,10 +20,13 @@
   display: block;
   margin: 50px auto;
 }
-
+p{
+ text-align: justify;
+}
 aside{
 
-  background-color: #dbc440;
+  background-color: #6C8F8F;
+  color: white;
 }
 
 aside p{
@@ -33,7 +36,7 @@ aside p{
 
 aside h2{
   background-color: #454545;
-  color: #dbc440;
+  color: #6C8F8F;
   text-align: center;
   text-transform: uppercase;
   padding: 10px;
@@ -64,11 +67,11 @@ header{
 }
 
 .name span{
-  color: #dbc440;
+  color: #6C8F8F;
 }
 
 .uyellow span{
-  text-decoration: underline solid #dbc440;
+  text-decoration: underline solid #6C8F8F;
 }
 
 section{
@@ -86,21 +89,21 @@ main section div{
 
 i{
   font-size: 30px;
-  color: #454545;
+  color: white;
 }
 hr{
-  color: #dbc440;
+  color: #6C8F8F;
 }
 
 h3 i{
-  color: #dbc440;
+  color: #6C8F8F;
   font-size: 20px;
   padding: 0px 30px 15px 0px;
 }
 
 .arrow , .bullet {
   font-size: 15px;
-  color: #dbc440;
+  color: #6C8F8F;
   padding-right: 20px;
 }
 
@@ -112,7 +115,7 @@ h3 i{
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-
+  justify-content: space-between;
 }
 
 /*------For mid size screen---- */
@@ -133,7 +136,6 @@ h3 i{
   
   .innercon{
     flex-direction: row;
-   
   }
 
   .innercon p:nth-child(1){
@@ -151,13 +153,13 @@ h3 i{
 @media only screen and (min-width: 960px){
   .container{
     flex-direction: row;
-    width: 960px;
+    width: 80%;
   }
   aside{
-    width: 300px;
+    width: 30%;
   }
   main{
-    width: 660px;
+    width: 70%;
   }
   ul{
     flex-direction: column;
