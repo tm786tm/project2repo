@@ -120,9 +120,9 @@ h3 i{
 }
 .innercon{
   display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: space-between;
+  flex-direction: column;
+  
+  
 }
 
 footer{
@@ -155,15 +155,16 @@ footer p{
   
   .innercon{
     flex-direction: row;
-    
+    flex-wrap: wrap;
+    justify-content: space-between;
   }
 
   .innercon p:nth-child(1){
-    flex-basis: 30%;
+    flex-basis: 40%;
   }
 
   .innercon p:nth-child(2){
-    flex-basis: 60%;
+    flex-basis: 50%;
   }
 
 
