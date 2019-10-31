@@ -5,152 +5,134 @@
   padding: 0;
   font-family: 'Titillium Web', sans-serif;}
 
-/*----------Mobile first----------*/
-.container{
-  display: flex;
-  flex-direction: column;
-  width: 100%;
-  margin: 0px auto;}
+p{text-align: justify;}
 
-#avatar{
+.primary-bgcolor{background-color: #6C8F8F;}
+
+.primary-txtcolor{color: #6C8F8F;}
+
+.flex{display: flex;}
+
+.underline{text-decoration: underline solid #6C8F8F;}
+
+i{font-size: 30px;
+  color: white;}
+
+/*----------Mobile first----------*/
+/*-------------Header-------------*/
+
+.header{
+  width: 100%;
+  margin: auto;
+  flex-direction: column;}
+
+.avatar__img{
   display: block;
   margin: 50px auto;
   border-radius: 50%;}
 
-p{
- text-align: justify;}
+.heading{
+  padding: 70px 30px;
+  background-color: azure;}
 
-aside{
-  background-color: #6C8F8F;
+/*-----------Container-----------*/
+
+.container{
+  flex-direction: column;
+  width: 100%;
+  margin: 0px auto;}
+
+/*-------------aside-------------*/
+
+.side{
   color: white;}
 
-aside p{
-  padding: 25px;
-  text-align: justify;}
-
-aside h2{
+.side__heading{
   background-color: #454545;
-  color: #6C8F8F;
   text-align: center;
   text-transform: uppercase;
   padding: 10px;}
 
-ul{
-  display: flex;
+.side__text{
+  padding: 25px;}
+
+.contact{
   flex-direction: column;
   flex-wrap: wrap;}
 
-li{
+.contact__item{
   padding: 10px;
   list-style: none;
   padding-left: 25px;
   width: 250px;}
 
-a{
+.contact__item a{
   color: white;}
 
-main{
-  background-color: azure;}
+/*-------------Main-------------*/
 
-.name{
-  text-transform: uppercase;
-  font-size: 2.5em;
-}
-
-header{
-  width: 100%;
-  margin: auto;
-  display: flex;
-  flex-direction: column;}
-
-header div:nth-child(1){
-  background-color: #6C8F8F;}
-
-header div:nth-child(2){
-  padding: 70px 30px;
-  background-color: azure;}
-
-.name span{
-  color: #6C8F8F;}
-
-.uyellow span{
-  text-decoration: underline solid #6C8F8F;}
-
-section{
+.main-content{
+  background-color: azure;
   padding: 25px;}
 
-main section p{
+.main-content p, .card{
   padding-bottom: 20px;}
 
-section div{
-  padding-bottom: 20px;}
+.card__innercon{
+  flex-direction: column;}
 
-.fontaw{
-  display: flex;
+.side--space{
   justify-content: space-around;}
 
-i{
-  font-size: 30px;
-  color: white;}
-
-hr{
-  color: #6C8F8F;}
-
-h3 i{
-  color: #6C8F8F;
-  font-size: 20px;
-  padding: 0px 30px 15px 0px;}
-
-.arrow , .bullet {
+.card--arrow , .card--bullet {
   font-size: 15px;
-  color: #6C8F8F;
   padding-right: 20px;}
 
-.bullet {
+.card--bullet {
   font-size: 5px;
   vertical-align: middle;}
 
-.innercon{
-  display: flex;
-  flex-direction: column;}
+.card-icon--padding{
+  padding: 0px 30px 15px 0px;}
 
-footer{
+
+/*------------Footer------------*/
+
+.footer{
   background-color: #454545;
   padding: 10px;
   width:100%;
   margin: 0px auto 10px auto;}
 
-footer p{
-  text-align: center;
-  color: #6C8F8F;}
+.footer__text{
+  text-align: center;}
 
 /*------For mid size screen---- */
 
 @media only screen and (min-width: 600px){
 
+  .header{
+    text-align: center;}
 
-  ul{
+  .contact{
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: center;}
 
-  li{
+  .contact__item{
     text-align: center;
     padding-left: 20px;}
   
-  .innercon{
+  .card__innercon{
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-between;}
 
-  .innercon p:nth-child(1){
+  .card__innercon p:nth-child(1){
     flex-basis: 40%;}
 
-  .innercon p:nth-child(2){
+  .card__innercon p:nth-child(2){
     flex-basis: 50%;}
-
-  header{
-    text-align: center;}
 
 }
 
@@ -158,35 +140,35 @@ footer p{
 
 @media only screen and (min-width: 960px){
 
-  header{
-    width: 80%;
-    flex-direction: row;
-    text-align: left;}
-
-  header div:nth-child(1){
-    width:30%;}
-
-  header div:nth-child(2){
-    width:70%;}
-
   .container{
     flex-direction: row;
     width: 80%;}
 
-  aside{
+  .header{
+    width: 80%;
+    flex-direction: row;
+    text-align: left;}
+
+  .avatar{
+    width:30%;}
+
+  .heading{
+    width:70%;}
+
+  .side{
     width: 30%;}
 
-  main{
+  .main-content{
     width: 70%;}
 
-  ul{
+  .contact{
     flex-direction: column;}
 
-  li{
+  .contact__item{
     text-align: left;
     padding-left: 25px;}
   
-  footer{ 
+  .footer{ 
     width: 80%;}
 
 }
