@@ -1,0 +1,245 @@
+/*-----------Variables------------*/
+
+$primary-color: #6C8F8F;
+
+/*-------------Mixins-------------*/
+
+@mixin tablet {
+  @media only screen and (min-width: 600px) {
+    @content;
+  }
+}
+
+@mixin large_screen {
+  @media only screen and (min-width: 960px) {
+    @content;
+  }
+}
+
+/*----------Global rules---------*/
+
+* {
+  box-sizing: border-box;
+  margin: 0px;
+  padding: 0;
+  font-family: 'Titillium Web', sans-serif;
+}
+
+p {
+  text-align: justify;
+}
+
+i {
+  font-size: 30px;
+  color: white;
+  color: $primary-color;
+}
+
+/*-------------Header-------------*/
+
+.header {
+  display: flex;
+  width: 100%;
+  margin: auto;
+  flex-direction: column;
+
+  @include tablet {
+    text-align: center;
+  }
+
+  @include large_screen {
+    width: 80%;
+    flex-direction: row;
+    text-align: left;
+  }
+}
+
+.avatar {
+  background-color: $primary-color;
+
+  &__img {
+    display: block;
+    margin: 50px auto;
+    border-radius: 50%;
+  }
+
+  @include large_screen {
+    width: 30%;
+  }
+}
+
+.heading {
+  padding: 70px 30px;
+  background-color: azure;
+
+  &__name span {
+    color: $primary-color;
+  }
+
+  &__job span {
+    text-decoration: underline solid $primary-color;
+  }
+
+  @include large_screen {
+    width: 70%;
+  }
+}
+
+/*-----------Container-----------*/
+
+.container {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  margin: 0px auto;
+
+  @include large_screen {
+    flex-direction: row;
+    width: 80%;
+  }
+}
+
+/*-------------aside-------------*/
+
+.side {
+  color: white;
+  background-color: $primary-color;
+
+  &__heading {
+    background-color: #454545;
+    text-align: center;
+    text-transform: uppercase;
+    padding: 10px;
+    color: $primary-color;
+  }
+
+  &__text {
+    padding: 25px;
+  }
+
+  &--space {
+    display: flex;
+    justify-content: space-around;
+  }
+
+  @include large_screen {
+    width: 30%;
+  }
+}
+
+.contact {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+
+  li {
+    padding: 10px;
+    list-style: none;
+    padding-left: 25px;
+    width: 250px;
+  }
+
+  li a {
+    color: white;
+  }
+
+  @include tablet {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+
+    li {
+      text-align: center;
+      padding-left: 20px;
+    }
+  }
+
+  @include large_screen {
+    flex-direction: column;
+
+    li {
+      text-align: left;
+      padding-left: 25px;
+    }
+  }
+}
+
+/*-------------Main-------------*/
+
+.main-content {
+  background-color: azure;
+  padding: 25px;
+
+  p {
+    padding-bottom: 20px;
+  }
+
+  @include large_screen {
+    width: 70%;
+  }
+}
+
+.card {
+  padding-bottom: 20px;
+
+  &__innercon {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &--arrow,
+  &--bullet {
+    font-size: 15px;
+    padding-right: 20px;
+    color: $primary-color;
+  }
+
+  &--bullet {
+    font-size: 5px;
+    vertical-align: middle;
+  }
+
+  hr {
+    color: $primary-color;
+  }
+
+  @include tablet {
+    &__innercon {
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: space-between;
+    }
+
+    &__innercon p:nth-child(1) {
+      flex-basis: 40%;
+    }
+
+    &__innercon p:nth-child(2) {
+      flex-basis: 50%;
+    }
+  }
+}
+
+.card-icon--padding {
+  padding: 0px 30px 15px 0px;
+  color: $primary-color;
+}
+
+
+/*------------Footer------------*/
+
+.footer {
+  background-color: #454545;
+  padding: 10px;
+  width: 100%;
+  margin: 0px auto 10px auto;
+
+  &__text {
+    text-align: center;
+    color: $primary-color;
+  }
+
+  @include large_screen {
+    width: 80%;
+  }
+}
