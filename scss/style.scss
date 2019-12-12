@@ -35,7 +35,7 @@ $third-color: #1A2633;
   margin: auto;
   flex-direction: column;
   background-color: $second-color;
-
+  
   @include tablet {
     text-align: center;
   }
@@ -55,17 +55,14 @@ $third-color: #1A2633;
     margin: 50px auto;
     border-radius: 50%;
     animation-name: fade-in;
-    animation-delay: 500ms;
-    animation-fill-mode: backwards;
     animation-duration: 3s;
   }
-
-  @keyframes fade-in {
-    0% {
+  
+  @keyframes fade-in{
+    0%{
       opacity: 0;
     }
-
-    100% {
+    100%{
       opacity: 1;
     }
   }
@@ -79,20 +76,16 @@ $third-color: #1A2633;
   padding: 70px 30px;
   overflow: hidden;
 
-  &__name {
-    animation-name: move-left;
-    animation-delay: 500ms;
-    animation-fill-mode: backwards;
-    animation-duration: 2s;
+  &__name{
+  animation-name: move-left;
+  animation-duration: 2s;
   }
-
-  &__job {
-    animation-name: move-up;
-    animation-delay: 500ms;
-    animation-fill-mode: backwards;
-    animation-duration: 2s;
+  
+  &__job{
+  animation-name: move-up;
+  animation-duration: 2s;
   }
-
+  
   &__name span {
     color: $primary-color;
   }
@@ -112,7 +105,7 @@ $third-color: #1A2633;
       opacity: 1;
     }
   }
-
+  
   @keyframes move-up {
     0% {
       transform: translateY(100px);
@@ -179,16 +172,16 @@ $third-color: #1A2633;
   flex-wrap: wrap;
 
   li {
-    padding-left: 5px;
-    margin: 10px 10px 10px 30px;
+    padding: 10px;
     list-style: none;
+    padding-left: 25px;
     width: 250px;
   }
 
   li a {
     color: white;
   }
-
+  
   p {
     text-align: justify;
   }
@@ -198,7 +191,10 @@ $third-color: #1A2633;
     flex-wrap: wrap;
     justify-content: center;
 
-    li {}
+    li {
+      text-align: center;
+      padding-left: 20px;
+    }
   }
 
   @include large_screen {
@@ -206,6 +202,7 @@ $third-color: #1A2633;
 
     li {
       text-align: left;
+      padding-left: 25px;
     }
   }
 }
@@ -215,7 +212,9 @@ $third-color: #1A2633;
 .main-content {
   background-color: $second-color;
   padding: 25px;
+  
 
+  
   @include large_screen {
     width: 70%;
   }
@@ -223,9 +222,6 @@ $third-color: #1A2633;
 
 .card {
   padding-bottom: 20px;
-  height: 0px;
-  transition: height 1s;
-  overflow: hidden;
 
   &__innercon {
     display: flex;
@@ -248,7 +244,7 @@ $third-color: #1A2633;
     padding-bottom: 20px;
     text-align: justify;
   }
-
+  
   hr {
     color: $primary-color;
   }
@@ -270,64 +266,10 @@ $third-color: #1A2633;
   }
 }
 
-label {
-  cursor: pointer;
-}
-
-input[type="checkbox"] {
-  display: none;
-}
-
-form input:checked~.card1 {
-  height: 450px;
-  transition: height 1s;
-}
-
-form input:checked~.card2 {
-  height: 1300px;
-  transition: height 1s;
-}
-
-form input:checked~.card3 {
-  height: 300px;
-  transition: height 1s;
-}
-
-@include tablet {
-  form input:checked~.card1 {
-    height: 350px;
-    transition: height 1s;
-  }
-
-  form input:checked~.card2 {
-    height: 850px;
-  }
-
-  form input:checked~.card3 {
-    height: 200px;
-    transition: height 1s;
-  }
-
-  @include large_screen {
-    form input:checked~.card2 {
-      height: 900px;
-    }
-  }
-}
-
 .card-icon--style {
   padding: 0px 30px 15px 0px;
   color: $primary-color;
   font-size: 30px;
-}
-
-h3 {
-  display: inline-block;
-  width: 200px;
-}
-
-.tab-icon {
-  color: $primary-color;
 }
 
 
