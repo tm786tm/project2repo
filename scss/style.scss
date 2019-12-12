@@ -1,8 +1,6 @@
 /*-----------Variables------------*/
 
-$primary-color: #2DA2B8;
-$second-color: #C1DAE0;
-$third-color: #1A2633;
+$primary-color: #6C8F8F;
 
 /*-------------Mixins-------------*/
 
@@ -27,6 +25,16 @@ $third-color: #1A2633;
   font-family: 'Titillium Web', sans-serif;
 }
 
+p {
+  text-align: justify;
+}
+
+i {
+  font-size: 30px;
+  color: white;
+  color: $primary-color;
+}
+
 /*-------------Header-------------*/
 
 .header {
@@ -34,8 +42,7 @@ $third-color: #1A2633;
   width: 100%;
   margin: auto;
   flex-direction: column;
-  background-color: $second-color;
-  
+
   @include tablet {
     text-align: center;
   }
@@ -54,17 +61,6 @@ $third-color: #1A2633;
     display: block;
     margin: 50px auto;
     border-radius: 50%;
-    animation-name: fade-in;
-    animation-duration: 3s;
-  }
-  
-  @keyframes fade-in{
-    0%{
-      opacity: 0;
-    }
-    100%{
-      opacity: 1;
-    }
   }
 
   @include large_screen {
@@ -74,48 +70,14 @@ $third-color: #1A2633;
 
 .heading {
   padding: 70px 30px;
-  overflow: hidden;
+  background-color: azure;
 
-  &__name{
-  animation-name: move-left;
-  animation-duration: 2s;
-  }
-  
-  &__job{
-  animation-name: move-up;
-  animation-duration: 2s;
-  }
-  
   &__name span {
     color: $primary-color;
   }
 
   &__job span {
     text-decoration: underline solid $primary-color;
-  }
-
-  @keyframes move-left {
-    0% {
-      transform: translateX(100px);
-      opacity: 0;
-    }
-
-    100% {
-      transform: translateX(0);
-      opacity: 1;
-    }
-  }
-  
-  @keyframes move-up {
-    0% {
-      transform: translateY(100px);
-      opacity: 0;
-    }
-
-    100% {
-      transform: translateY(0);
-      opacity: 1;
-    }
   }
 
   @include large_screen {
@@ -144,7 +106,7 @@ $third-color: #1A2633;
   background-color: $primary-color;
 
   &__heading {
-    background-color: $third-color;
+    background-color: #454545;
     text-align: center;
     text-transform: uppercase;
     padding: 10px;
@@ -158,7 +120,6 @@ $third-color: #1A2633;
   &--space {
     display: flex;
     justify-content: space-around;
-    font-size: 30px;
   }
 
   @include large_screen {
@@ -180,10 +141,6 @@ $third-color: #1A2633;
 
   li a {
     color: white;
-  }
-  
-  p {
-    text-align: justify;
   }
 
   @include tablet {
@@ -210,11 +167,13 @@ $third-color: #1A2633;
 /*-------------Main-------------*/
 
 .main-content {
-  background-color: $second-color;
+  background-color: azure;
   padding: 25px;
-  
 
-  
+  p {
+    padding-bottom: 20px;
+  }
+
   @include large_screen {
     width: 70%;
   }
@@ -240,11 +199,6 @@ $third-color: #1A2633;
     vertical-align: middle;
   }
 
-  p {
-    padding-bottom: 20px;
-    text-align: justify;
-  }
-  
   hr {
     color: $primary-color;
   }
@@ -266,17 +220,16 @@ $third-color: #1A2633;
   }
 }
 
-.card-icon--style {
+.card-icon--padding {
   padding: 0px 30px 15px 0px;
   color: $primary-color;
-  font-size: 30px;
 }
 
 
 /*------------Footer------------*/
 
 .footer {
-  background-color: $third-color;
+  background-color: #454545;
   padding: 10px;
   width: 100%;
   margin: 0px auto 10px auto;
